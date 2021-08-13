@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import serviceList from '../reducers/SliceServiceList';
+import thunk from 'redux-thunk';
 
 const logger = (store) => (next) => (action) => {
   console.log('dispatchin', action);
@@ -11,5 +12,6 @@ const logger = (store) => (next) => (action) => {
 
 export default configureStore({
   reducer: { serviceList },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(thunk, logger),
 });

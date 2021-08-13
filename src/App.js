@@ -12,7 +12,7 @@ export const baseURL = 'https://ra-thunk-redux-back.herokuapp.com/api/services';
 
 export default function App() {
   return (
-    <Router basename='/ra-redux-thunx-api'>
+    <Router basename='/ra-redux-thunx-api/'>
       <Route exact path='/'>
         <Redirect to='/services' />
       </Route>

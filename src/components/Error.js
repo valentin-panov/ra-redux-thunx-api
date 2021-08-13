@@ -15,7 +15,7 @@ export default function Error() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root + ' shadow'} style={{ margin: '1vmin' }}>
+    <div className={classes.root + ' shadow'} style={{ margin: '0.5vmin' }}>
       <Alert variant='filled' severity='error'>
         Произошла ошибка!
       </Alert>
