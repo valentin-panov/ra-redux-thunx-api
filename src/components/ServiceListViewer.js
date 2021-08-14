@@ -9,7 +9,7 @@ import Error from './Error';
 import {
   fetchServicesThunked,
   deleteServiceThunked,
-} from '../utils/fetchServices';
+} from '../actions/fetchServices';
 
 export default function ServiceListViewer() {
   const dispatch = useDispatch();
