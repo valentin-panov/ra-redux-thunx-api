@@ -13,7 +13,7 @@ export const appURL = '/ra-redux-thunx-api';
 export default function App() {
   return (
     <Router>
-      <Route exact path={`/`}>
+      <Route exact path={`${appURL}/`}>
         <Redirect to={`${appURL}/services`} />
       </Route>
       <div className='wrapper>'>
