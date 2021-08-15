@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ra-redux-thunx-api/static/css/main.c044b9ba.chunk.css",
+    "main.js": "/ra-redux-thunx-api/static/js/main.51d99275.chunk.js",
+    "main.js.map": "/ra-redux-thunx-api/static/js/main.51d99275.chunk.js.map",
+    "runtime-main.js": "/ra-redux-thunx-api/static/js/runtime-main.15fbbc5d.js",
+    "runtime-main.js.map": "/ra-redux-thunx-api/static/js/runtime-main.15fbbc5d.js.map",
+    "static/js/2.b1495823.chunk.js": "/ra-redux-thunx-api/static/js/2.b1495823.chunk.js",
+    "static/js/2.b1495823.chunk.js.map": "/ra-redux-thunx-api/static/js/2.b1495823.chunk.js.map",
+    "static/js/3.4fb28d2a.chunk.js": "/ra-redux-thunx-api/static/js/3.4fb28d2a.chunk.js",
+    "static/js/3.4fb28d2a.chunk.js.map": "/ra-redux-thunx-api/static/js/3.4fb28d2a.chunk.js.map",
+    "index.html": "/ra-redux-thunx-api/index.html",
+    "static/css/main.c044b9ba.chunk.css.map": "/ra-redux-thunx-api/static/css/main.c044b9ba.chunk.css.map",
+    "static/js/2.b1495823.chunk.js.LICENSE.txt": "/ra-redux-thunx-api/static/js/2.b1495823.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.15fbbc5d.js",
+    "static/js/2.b1495823.chunk.js",
+    "static/css/main.c044b9ba.chunk.css",
+    "static/js/main.51d99275.chunk.js"
+  ]
+}
