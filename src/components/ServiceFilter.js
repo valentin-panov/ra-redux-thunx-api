@@ -3,7 +3,7 @@ import { Button, TextField } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { reset, setFilter } from '../reducers/SliceServiceList';
-import { postServiceThunked } from '../actions/fetchServices';
+import { postServiceThunked } from '../reducers/fetchServices';
 
 export default function ServiceFilter() {
   let history = useHistory();

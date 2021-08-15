@@ -6,7 +6,7 @@ import { reset } from '../reducers/SliceServiceList';
 import {
   postServiceThunked,
   fetchServiceThunked,
-} from '../actions/fetchServices';
+} from '../reducers/fetchServices';
 import Loading from './Loading';
 import Error from './Error';
 
