@@ -8,31 +8,31 @@ import {
 import ServiceEditor from './components/ServiceEditor';
 import ServiceListViewer from './components/ServiceListViewer';
 
-export const baseURL = 'https://ra-thunk-redux-back.herokuapp.com/api/services';
-export const appURL = 'https://valentin-panov.github.io/ra-redux-thunx-api';
+export const serverURL = 'https://ra-thunk-redux-back.herokuapp.com/api/services';
 
 export default function App() {
   return (
-    <Router>
-      <Route exact path={`${appURL}/`}>
-        <Redirect to={`${appURL}/services`} />
-      </Route>
-      <div className='wrapper>'>
-        <div className='container'>
-          <Switch>
-            <Route
-              path={`${appURL}/services`}
+    <Router basename='/ra-redux-thunx-api'>
+        <Route exact path={`${process.env.PUBLIC_URL}/`}>
+            <Redirect to={`${process.env.PUBLIC_URL}/services`} />
+        </Route>
+
+        <div className='wrapper>'>
+            <div className='container'>
+              <Switch>
+              <Route
+              path={`${process.env.PUBLIC_URL}/services`}
               exact
               render={(props) => <ServiceListViewer {...props} />}
             />
-            <Route
-              path={`${appURL}/services/:id`}
+              <Route
+              path={`${process.env.PUBLIC_URL}/services/:id`}
               exact
               render={(props) => <ServiceEditor {...props} />}
             />
           </Switch>
+          </div>
         </div>
-      </div>
     </Router>
   );
 }

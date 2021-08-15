@@ -15,7 +15,6 @@ const counterSlice = createSlice({
       state.items = action.payload;
     },
     edit(state, action) {
-      console.log('EDIT: ', action.payload);
       state.editItem = action.payload;
     },
     reset(state, action) {

@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { reset, setFilter } from '../reducers/SliceServiceList';
 import { postServiceThunked } from '../reducers/fetchServices';
-import {appURL} from "../App";
 
 export default function ServiceFilter() {
   let history = useHistory();
@@ -18,7 +17,7 @@ export default function ServiceFilter() {
     event.preventDefault();
     dispatch(postServiceThunked(payload));
     formReset();
-    history.push(`${appURL}/`);
+    history.push(`${process.env.PUBLIC_URL}/`);
   };
 
   const formReset = () => {
@@ -26,7 +25,7 @@ export default function ServiceFilter() {
     setPrice('');
     setId(0);
     dispatch(reset());
-    history.push(`${appURL}/`);
+    history.push(`${process.env.PUBLIC_URL}/`);
   };
 
   useEffect(() => {

@@ -9,7 +9,6 @@ import {
 } from '../reducers/fetchServices';
 import Loading from './Loading';
 import Error from './Error';
-import {appURL} from "../App";
 
 export default function ServiceEditor({ match }) {
   let history = useHistory();
@@ -26,7 +25,7 @@ export default function ServiceEditor({ match }) {
     event.preventDefault();
     dispatch(postServiceThunked(payload));
     formReset();
-    history.push(`${appURL}/`);
+    history.push(`${process.env.PUBLIC_URL}/`);
   };
 
   const formReset = () => {
@@ -100,7 +99,7 @@ export default function ServiceEditor({ match }) {
             />
           </div>
           <div className='btn-holder'>
-            <Link to={(`${appURL}/`)} style={{ display: 'flex', textDecoration: 'none' }}>
+            <Link to={(`${process.env.PUBLIC_URL}/`)} style={{ display: 'flex', textDecoration: 'none' }}>
               <Button
                 variant='contained'
                 color='secondary'

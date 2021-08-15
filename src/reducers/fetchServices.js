@@ -5,11 +5,11 @@ import {
   fetchSuccess,
   fetchError,
 } from './SliceServiceList';
-import { baseURL } from '../App';
+import { serverURL } from '../App';
 
 export const fetchServicesThunked = () => async (dispatch, getState) => {
   const method = 'GET';
-  const requestURL = baseURL;
+  const requestURL = serverURL;
 
   dispatch(fetchStart());
   try {
@@ -34,7 +34,7 @@ export const postServiceThunked = (params) => async (dispatch, getState) => {
     return;
   }
   const method = 'POST';
-  const requestURL = baseURL;
+  const requestURL = serverURL;
 
   dispatch(fetchStart());
   try {
@@ -59,7 +59,7 @@ export const deleteServiceThunked = (params) => async (dispatch, getState) => {
     return;
   }
   const method = 'DELETE';
-  const requestURL = baseURL + `/${params.id}`;
+  const requestURL = serverURL + `/${params.id}`;
 
   dispatch(fetchStart());
   try {
@@ -83,8 +83,7 @@ export const fetchServiceThunked = (params) => async (dispatch, getState) => {
     return;
   }
   const method = 'GET';
-  const requestURL = baseURL + `/${params.id}`;
-  console.log(requestURL);
+  const requestURL = serverURL + `/${params.id}`;
 
   dispatch(fetchStart());
   try {
