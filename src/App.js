@@ -9,23 +9,23 @@ import ServiceEditor from './components/ServiceEditor';
 import ServiceListViewer from './components/ServiceListViewer';
 
 export const baseURL = 'https://ra-thunk-redux-back.herokuapp.com/api/services';
-
+export const appURL = '/ra-redux-thunx-api';
 export default function App() {
   return (
-    <Router basename='/ra-redux-thunx-api/'>
-      <Route exact path='/'>
-        <Redirect to='/services' />
+    <Router>
+      <Route exact path={`${appURL}/`}>
+        <Redirect to={`${appURL}/services`} />
       </Route>
       <div className='wrapper>'>
         <div className='container'>
           <Switch>
             <Route
-              path='/services'
+              path={`${appURL}/services`}
               exact
               render={(props) => <ServiceListViewer {...props} />}
             />
             <Route
-              path='/services/:id'
+              path={`${appURL}/services/:id`}
               exact
               render={(props) => <ServiceEditor {...props} />}
             />

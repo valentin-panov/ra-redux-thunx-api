@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { reset, setFilter } from '../reducers/SliceServiceList';
 import { postServiceThunked } from '../reducers/fetchServices';
+import {appURL} from "../App";
 
 export default function ServiceFilter() {
   let history = useHistory();
@@ -17,7 +18,7 @@ export default function ServiceFilter() {
     event.preventDefault();
     dispatch(postServiceThunked(payload));
     formReset();
-    history.push('/');
+    history.push(`${appURL}/`);
   };
 
   const formReset = () => {
@@ -25,7 +26,7 @@ export default function ServiceFilter() {
     setPrice('');
     setId(0);
     dispatch(reset());
-    history.push('/');
+    history.push(`${appURL}/`);
   };
 
   useEffect(() => {
@@ -54,7 +55,7 @@ export default function ServiceFilter() {
         onSubmit={(event) => {
           onNewServiceSubmitHandler({
             event,
-            payload: { id, name, price, content: 'Новый элемент' },
+            payload: { id, name, price, content: 'Заполните описание' },
           });
         }}
       >

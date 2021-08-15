@@ -9,6 +9,7 @@ import {
 } from '../reducers/fetchServices';
 import Loading from './Loading';
 import Error from './Error';
+import {appURL} from "../App";
 
 export default function ServiceEditor({ match }) {
   let history = useHistory();
@@ -20,11 +21,12 @@ export default function ServiceEditor({ match }) {
   const [content, setContent] = useState('');
   const status = store.status;
 
+
   const onNewServiceSubmitHandler = ({ event, payload }) => {
     event.preventDefault();
     dispatch(postServiceThunked(payload));
     formReset();
-    history.push('/');
+    history.push(`${appURL}/`);
   };
 
   const formReset = () => {
@@ -98,7 +100,7 @@ export default function ServiceEditor({ match }) {
             />
           </div>
           <div className='btn-holder'>
-            <Link to={`/`} style={{ display: 'flex', textDecoration: 'none' }}>
+            <Link to={(`${appURL}/`)} style={{ display: 'flex', textDecoration: 'none' }}>
               <Button
                 variant='contained'
                 color='secondary'

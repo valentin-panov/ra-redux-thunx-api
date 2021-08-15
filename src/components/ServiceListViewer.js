@@ -10,6 +10,7 @@ import {
   fetchServicesThunked,
   deleteServiceThunked,
 } from '../reducers/fetchServices';
+import {appURL} from "../App";
 
 export default function ServiceListViewer() {
   const dispatch = useDispatch();
@@ -46,7 +47,7 @@ export default function ServiceListViewer() {
               <span className='card_item-name'>{item.name}</span>
               <span className='card_item-price'>{item.price}</span>
 
-              <Link to={`/services/${item.id}`} style={{ display: 'flex' }}>
+              <Link to={`${appURL}/services/${item.id}`} style={{ display: 'flex' }}>
                 <EditIcon className='icon' />
               </Link>
               <CloseIcon
