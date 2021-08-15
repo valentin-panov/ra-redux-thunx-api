@@ -13,8 +13,8 @@ export const serverURL = 'https://ra-thunk-redux-back.herokuapp.com/api/services
 export default function App() {
   return (
     <Router basename='/ra-redux-thunx-api'>
-        <Route exact path={`${process.env.PUBLIC_URL}/`}>
-            <Redirect to={`${process.env.PUBLIC_URL}/services`} />
+        <Route exact path={`/`}>
+            <Redirect to={`/services`} />
         </Route>
 
         <div className='wrapper>'>
