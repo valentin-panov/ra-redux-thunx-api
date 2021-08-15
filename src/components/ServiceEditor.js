@@ -17,7 +17,7 @@ export default function ServiceEditor({ match }) {
   const [id, setId] = useState(match.params.id);
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
-  const [content, setСontent] = useState('');
+  const [content, setContent] = useState('');
   const status = store.status;
 
   const onNewServiceSubmitHandler = ({ event, payload }) => {
@@ -31,7 +31,7 @@ export default function ServiceEditor({ match }) {
     setName('');
     setPrice('');
     setId('');
-    setСontent('');
+    setContent('');
     dispatch(reset());
   };
 
@@ -41,12 +41,12 @@ export default function ServiceEditor({ match }) {
       setId(store.editItem.id);
       setName(store.editItem.name);
       setPrice(store.editItem.price);
-      setСontent(store.editItem.content);
+      setContent(store.editItem.content);
     } else {
       setName('');
       setPrice('');
       setId(0);
-      setСontent('');
+      setContent('');
     }
   }, [store.editItem]);
 
@@ -90,7 +90,7 @@ export default function ServiceEditor({ match }) {
             />
             <TextField
               value={content}
-              onInput={(e) => setСontent(e.target.value)}
+              onInput={(e) => setContent(e.target.value)}
               id='content'
               label='Описание'
               variant='outlined'

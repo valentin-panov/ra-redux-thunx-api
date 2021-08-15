@@ -42,7 +42,7 @@ export default function ServiceListViewer() {
       {status === 'success' && items.length > 0 && (
         <ul className='card'>
           {items.map((item) => (
-            <li className='card_item' key={item.id} dataid={item.id}>
+            <li className='card_item' key={item.id} data-id={item.id}>
               <span className='card_item-name'>{item.name}</span>
               <span className='card_item-price'>{item.price}</span>
 
