@@ -9,7 +9,8 @@ import ServiceEditor from './components/ServiceEditor';
 import ServiceListViewer from './components/ServiceListViewer';
 
 export const baseURL = 'https://ra-thunk-redux-back.herokuapp.com/api/services';
-export const appURL = '/ra-redux-thunx-api';
+export const appURL = 'https://valentin-panov.github.io/ra-redux-thunx-api';
+
 export default function App() {
   return (
     <Router>
