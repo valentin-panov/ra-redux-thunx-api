@@ -25,7 +25,7 @@ export default function ServiceEditor({ match }) {
     event.preventDefault();
     dispatch(postServiceThunked(payload));
     formReset();
-    history.push(`${process.env.PUBLIC_URL}/`);
+    history.push(`/`);
   };
 
   const formReset = () => {
@@ -99,7 +99,7 @@ export default function ServiceEditor({ match }) {
             />
           </div>
           <div className='btn-holder'>
-            <Link to={(`${process.env.PUBLIC_URL}/`)} style={{ display: 'flex', textDecoration: 'none' }}>
+            <Link to={(`/`)} style={{ display: 'flex', textDecoration: 'none' }}>
               <Button
                 variant='contained'
                 color='secondary'

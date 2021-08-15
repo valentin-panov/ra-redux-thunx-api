@@ -17,7 +17,7 @@ export default function ServiceFilter() {
     event.preventDefault();
     dispatch(postServiceThunked(payload));
     formReset();
-    history.push(`${process.env.PUBLIC_URL}/`);
+    history.push(`/`);
   };
 
   const formReset = () => {
@@ -25,7 +25,7 @@ export default function ServiceFilter() {
     setPrice('');
     setId(0);
     dispatch(reset());
-    history.push(`${process.env.PUBLIC_URL}/`);
+    history.push(`/`);
   };
 
   useEffect(() => {

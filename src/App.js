@@ -21,12 +21,12 @@ export default function App() {
             <div className='container'>
               <Switch>
               <Route
-              path={`${process.env.PUBLIC_URL}/services`}
+              path={`/services`}
               exact
               render={(props) => <ServiceListViewer {...props} />}
             />
               <Route
-              path={`${process.env.PUBLIC_URL}/services/:id`}
+              path={`/services/:id`}
               exact
               render={(props) => <ServiceEditor {...props} />}
             />

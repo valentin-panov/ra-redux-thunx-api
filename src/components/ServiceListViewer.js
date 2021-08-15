@@ -46,7 +46,7 @@ export default function ServiceListViewer() {
               <span className='card_item-name'>{item.name}</span>
               <span className='card_item-price'>{item.price}</span>
 
-              <Link to={`${process.env.PUBLIC_URL}/services/${item.id}`} style={{ display: 'flex' }}>
+              <Link to={`/services/${item.id}`} style={{ display: 'flex' }}>
                 <EditIcon className='icon' />
               </Link>
               <CloseIcon
